@@ -5,10 +5,7 @@ import 'package:carb_poc/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
 
-const mockCarbs = [10, 8, 14, 9, 8, 11, 18];
-
 class HomePage extends StatelessWidget {
-  final PageController pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,6 @@ class HomePage extends StatelessWidget {
           _buildMyWeekChart(),
           _buildMyGoals(),
         ],
-        controller: pageController,
       ),
       align: IndicatorAlign.bottom,
       length: 2,
@@ -41,7 +37,7 @@ class HomePage extends StatelessWidget {
           children: [
             Card(
               child: WeeklyBarChart(
-                carbAmount: mockCarbs,
+                carbAmount: const [10, 8, 14, 9, 8, 11, 18],
               ),
             ),
           ],

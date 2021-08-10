@@ -5,7 +5,7 @@ class CarbPocApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Carb POC',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
