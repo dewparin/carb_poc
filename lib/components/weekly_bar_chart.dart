@@ -45,27 +45,23 @@ class WeeklyBarChart extends StatelessWidget {
   }
 
   Widget _buildTotalCarbLabel(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Text(
-          "0g",
-          style: Theme.of(context)
-              .textTheme
-              .headline6!
-              .copyWith(color: Colors.red),
-        )
-      ],
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Text(
+        "0g",
+        style: Theme.of(context)
+            .textTheme
+            .headline6!
+            .copyWith(color: Colors.red),
+      ),
     );
   }
 
   Widget _buildWeeklyBarChart(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1,
-      child: Container(
-        child: BarChart(
-          _makeBarChartData(),
-        ),
+      child: BarChart(
+        _makeBarChartData(),
       ),
     );
   }
