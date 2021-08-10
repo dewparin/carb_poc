@@ -1,5 +1,6 @@
 import 'package:carb_poc/components/my_goals/my_goals_data.dart';
 import 'package:carb_poc/components/my_goals/my_goals_pie_charts.dart';
+import 'package:carb_poc/constant.dart';
 import 'package:flutter/material.dart';
 
 class MyGoals extends StatelessWidget {
@@ -10,6 +11,9 @@ class MyGoals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(
+        defaultPadding,
+      ),
       child: Column(
         children: [
           Align(
